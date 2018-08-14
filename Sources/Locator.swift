@@ -131,7 +131,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 	}
     
     @available(iOS 11.0, *)
-    public var locationIndicator: Bool {
+    public var backgroundLocationIndicator: Bool {
         set { self.manager.showsBackgroundLocationIndicator = newValue }
         get { return self.manager.showsBackgroundLocationIndicator }
     }
