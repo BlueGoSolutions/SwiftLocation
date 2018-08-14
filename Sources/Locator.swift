@@ -129,6 +129,12 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 		set { self.manager.allowsBackgroundLocationUpdates = newValue }
 		get { return self.manager.allowsBackgroundLocationUpdates }
 	}
+    
+    @available(iOS 11.0, *)
+    public var locationIndicator: Bool {
+        set { self.manager.showsBackgroundLocationIndicator = newValue }
+        get { return self.manager.showsBackgroundLocationIndicator }
+    }
 	
 	/// Current authorization status of the location manager
 	public var authorizationStatus: CLAuthorizationStatus {
