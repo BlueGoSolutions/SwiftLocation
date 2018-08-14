@@ -11,7 +11,6 @@
 		52D6D9871BEFF229002C0205 /* SwiftLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* SwiftLocation.framework */; };
 		640E5B371FA492F7006CFB2E /* HeadingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E5B361FA492F7006CFB2E /* HeadingRequest.swift */; };
 		6459B1281FA4B8B800E0CD53 /* GeocoderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459B1271FA4B8B800E0CD53 /* GeocoderRequest.swift */; };
-		6459B1321FA4D67700E0CD53 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6459B1311FA4D67700E0CD53 /* Contacts.framework */; };
 		6459B1341FA4E5CA00E0CD53 /* FindPlaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459B1331FA4E5CA00E0CD53 /* FindPlaceRequest.swift */; };
 		6459B1391FA5B68900E0CD53 /* IPLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6459B1381FA5B68900E0CD53 /* IPLocationRequest.swift */; };
 		64880FD71FA3685400AC0639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64880FD61FA3685400AC0639 /* AppDelegate.swift */; };
@@ -22,8 +21,6 @@
 		64880FE91FA3686400AC0639 /* SwiftLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* SwiftLocation.framework */; };
 		64880FEB1FA3687C00AC0639 /* SwiftLocation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* SwiftLocation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		64880FED1FA3695500AC0639 /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64880FEC1FA3695500AC0639 /* Locator.swift */; };
-		64880FF21FA3698B00AC0639 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64880FF11FA3698600AC0639 /* CoreLocation.framework */; };
-		64880FF41FA369A900AC0639 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64880FF31FA369A400AC0639 /* MapKit.framework */; };
 		648810021FA36B3600AC0639 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648810011FA36B3600AC0639 /* Shared.swift */; };
 		648810071FA36C9300AC0639 /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648810061FA36C9300AC0639 /* LocationRequest.swift */; };
 		8933C7901EB5B82D000D00A4 /* SwiftLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* SwiftLocationTests.swift */; };
@@ -66,11 +63,8 @@
 		52D6D9861BEFF229002C0205 /* SwiftLocation-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftLocation-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		640E5B361FA492F7006CFB2E /* HeadingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingRequest.swift; sourceTree = "<group>"; };
 		6459B1271FA4B8B800E0CD53 /* GeocoderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderRequest.swift; sourceTree = "<group>"; };
-		6459B1311FA4D67700E0CD53 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		6459B1331FA4E5CA00E0CD53 /* FindPlaceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPlaceRequest.swift; sourceTree = "<group>"; };
 		6459B1381FA5B68900E0CD53 /* IPLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPLocationRequest.swift; sourceTree = "<group>"; };
-		6459B13D1FA5BE0800E0CD53 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Contacts.framework; sourceTree = DEVELOPER_DIR; };
-		6459B13F1FA5BE1700E0CD53 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/Contacts.framework; sourceTree = DEVELOPER_DIR; };
 		64880FD41FA3685400AC0639 /* TestApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64880FD61FA3685400AC0639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64880FD81FA3685400AC0639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,14 +73,6 @@
 		64880FE01FA3685400AC0639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64880FE21FA3685400AC0639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64880FEC1FA3695500AC0639 /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
-		64880FF11FA3698600AC0639 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		64880FF31FA369A400AC0639 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		64880FF51FA369AE00AC0639 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		64880FF71FA369B800AC0639 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		64880FF91FA369C100AC0639 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		64880FFB1FA369C500AC0639 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
-		64880FFD1FA369CA00AC0639 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		64880FFF1FA369CE00AC0639 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		648810011FA36B3600AC0639 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		648810061FA36C9300AC0639 /* LocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequest.swift; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* SwiftLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLocationTests.swift; sourceTree = "<group>"; };
@@ -99,9 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6459B1321FA4D67700E0CD53 /* Contacts.framework in Frameworks */,
-				64880FF41FA369A900AC0639 /* MapKit.framework in Frameworks */,
-				64880FF21FA3698B00AC0639 /* CoreLocation.framework in Frameworks */,
 				3E7CE75021232E93003267A2 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,17 +156,6 @@
 		64880FE81FA3686400AC0639 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6459B1311FA4D67700E0CD53 /* Contacts.framework */,
-				6459B13D1FA5BE0800E0CD53 /* Contacts.framework */,
-				6459B13F1FA5BE1700E0CD53 /* Contacts.framework */,
-				64880FFF1FA369CE00AC0639 /* MapKit.framework */,
-				64880FFD1FA369CA00AC0639 /* CoreLocation.framework */,
-				64880FFB1FA369C500AC0639 /* MapKit.framework */,
-				64880FF91FA369C100AC0639 /* CoreLocation.framework */,
-				64880FF71FA369B800AC0639 /* MapKit.framework */,
-				64880FF51FA369AE00AC0639 /* CoreLocation.framework */,
-				64880FF31FA369A400AC0639 /* MapKit.framework */,
-				64880FF11FA3698600AC0639 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
