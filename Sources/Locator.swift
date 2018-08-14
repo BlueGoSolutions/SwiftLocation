@@ -72,6 +72,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 				next = 0
 			}
 			self.callbacks[next] = callback
+            self.nextTokenID = next
 			return next
 		}
 		
@@ -125,7 +126,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 	
 	/// It is possible to force enable background location fetch even if your set any kind of Authorizations
 	public var backgroundLocationUpdates: Bool {
-		set { self.manager.allowsBackgroundLocationUpdates = true }
+		set { self.manager.allowsBackgroundLocationUpdates = newValue }
 		get { return self.manager.allowsBackgroundLocationUpdates }
 	}
 	
