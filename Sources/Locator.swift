@@ -456,7 +456,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 			self.locationRequests.remove(r)
 		} else {
 			r.timeout?.forceTimeout() // force timeout
-			self.completeLocationRequest(r) // complete request
+			self.completeLocationRequest(r, isStopped: true) // complete request
 		}
 		return true
 	}
@@ -469,7 +469,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 		/// No need to add this location request, because location services are turned off device-wide,
 		/// or the user has denied this app permissions to use them.
 		guard self.manager.servicesAreAvailable else {
-			self.completeLocationRequest(request)
+			self.completeLocationRequest(request, isStopped: false)
 			return
 		}
 		
@@ -503,7 +503,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 	
 	internal func locationRequestDidTimedOut(_ request: LocationRequest) {
 		if let _ = self.locationRequests.index(of: request) {
-			self.completeLocationRequest(request)
+			self.completeLocationRequest(request, isStopped: false)
 		}
 	}
 	
@@ -575,7 +575,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 			if $0.timeout?.hasTimedout ?? false {
 				// Non-recurring request has timed out, complete it
 				$0.location = location
-				self.completeLocationRequest($0)
+				self.completeLocationRequest($0, isStopped: false)
 			} else {
 				if let mostRecent = location {
 					if $0.isRecurring {
@@ -588,7 +588,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 						if $0.hasValidThrehsold(forLocation: mostRecent) {
 							// The request's desired accuracy has been reached, complete it
 							$0.location = location
-							self.completeLocationRequest($0)
+							self.completeLocationRequest($0, isStopped: false)
 						}
 					}
 				}
@@ -602,14 +602,14 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 	public func completeAllLocationRequests() {
 		let activeRequests = self.locationRequests
 		activeRequests.list.forEach {
-			self.completeLocationRequest($0)
+			self.completeLocationRequest($0, isStopped: false)
 		}
 	}
 	
 	/// Complete passed location request and remove from queue if possible.
 	///
 	/// - Parameter request: request
-	public func completeLocationRequest(_ request: LocationRequest?) {
+    public func completeLocationRequest(_ request: LocationRequest?, isStopped: Bool) {
 		guard let r = request else { return }
 		
 		r.timeout?.abort() // stop any running timer
@@ -622,6 +622,8 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 		// case where the user has denied permission to access location services and the request
 		// is immediately completed with the appropriate error.
 		DispatchQueue.main.async {
+            // Do not fire any events, if the LocationRequest was manually stopped.
+            guard !isStopped else { return }
 			if let error = r.error { // failed for some sort of error
 				r.failure?(error,r.location)
 			} else if let loc = r.location { // succeded
