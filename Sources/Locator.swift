@@ -712,7 +712,7 @@ public class LocatorManager: NSObject, CLLocationManagerDelegate {
 			if $0.isRecurring { // Keep the recurring request alive
 				self.processRecurringRequest($0)
 			} else { // Fail any non-recurring requests
-				self.completeLocationRequest($0)
+                self.completeLocationRequest($0, isStopped: false)
 			}
 		}
 	}
